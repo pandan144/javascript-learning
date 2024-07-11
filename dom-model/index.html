@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inches</title>
+    <link rel="stylesheet"  href="./style.css">
+</head>
+<body>
+
+    <div class="box">
+        <h1>CM TO INCHES</h1>
+        <input type="text" placeholder="Enter The Value" id="valuecm">
+        <button type="submit" onclick="changeinches()">Convert To Inches</button>
+        <div id="output">
+
+        </div>
+    </div>
+    
+    <script>
+        function changeinches(){
+            let value = Number(document.getElementById('valuecm').value);
+            let inches = value/2.54;
+            let output =document.getElementById('output');
+            output.innerText= inches.toFixed(4) + 'inches';
+        }
+    </script>
+</body>
+</html>

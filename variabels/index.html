@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Variables</title>
+</head>
+
+<body>
+
+
+    <h1>Variables </h1>
+    <ul>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+    </ul>
+    <h2>let :</h2>
+    <p>Variables declared with let have Block Scope<br>
+
+        Variables declared with let must be Declared before use<br>
+
+        Variables declared with let cannot be Redeclared in the same scope</p>
+
+    <h2>const</h2>
+
+    <p>Variables defined with const cannot be Redeclared<br>
+
+        Variables defined with const cannot be Reassigned<br>
+
+        Variables defined with const have Block Scope</p>
+
+
+    <script>
+
+        // Variables declared with let must be Declared before use
+        let out = 10;
+
+        console.log(out);
+
+        // Variables declared with let cannot be Redeclared in the same scope
+
+        let vlu = 30;
+
+        vlu = 20;
+
+        console.log(vlu);
+
+        //Variables declared with let have Block Scope
+
+
+        // {
+        //     let out2 = 50
+        // }
+        // console.log(out2)
+
+        // const 
+
+        // Variables defined with const cannot be Redeclared
+
+        // Variables defined with const cannot be Reassigned
+
+        const out3 = 30;
+
+        out3 = 20;
+
+        console.log(out3);
+
+    </script>
+
+</body>
+
+</html>
