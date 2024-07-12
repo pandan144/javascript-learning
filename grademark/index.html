@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Mark</title>
+    <link rel="stylesheet"  href="./style.css">
+</head>
+<body>
+
+    <div class="box">
+        <h1>Grade Mark</h1>
+        <input type="text" placeholder="Enter The Value" id="valuecm">
+        <button type="submit" onclick="grademark()">Convert To Grade</button>
+        <div id="output">
+
+        </div>
+    </div>
+    
+    <script>
+        function grademark(){
+            let value = Number(document.getElementById('valuecm').value);
+            let output =document.getElementById('output');
+            let grade
+            if(value>=90 && value<=100){
+                grade = "A"
+            }
+            else if(value<=70 && value>=90){
+                grade ="B"
+            }
+            else if(value<=50 && value>=70){
+                grade ="C"
+            }
+            else if(value<=35 && value>=50){
+                grade ="D"
+            }
+            else if(value > 35){
+                grade = "Fail"
+            }
+            else{
+                grade = "not Valude"
+            }
+            output.innerText= `Your Mark Grade is "${grade}"`;
+        }
+    </script>
+</body>
+</html>
