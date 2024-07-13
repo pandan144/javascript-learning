@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map methode</title>
+</head>
+<body>
+
+    <h1>Array Map Methodes</h1>
+    
+    <ul class="datamap">
+        <ol>DEMO Map</ol>
+    </ul>
+
+    <h1>Array of Object Map</h1>
+    <table id="userTable" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Work</th>
+                <th>Salary</th>
+                <th>Genter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        let value =["BCA","B.COM","BAC","IT"];
+
+        value.map(out =>{
+            let ol = document.createElement('ol');
+            ol.title = out;
+            ol.innerText = out.toLowerCase();
+            document.querySelector('.datamap').appendChild(ol);
+        })
+
+
+        let user=[
+            {
+                id:1,
+                name:'arul',
+                age:22,
+                work:"web developer",
+                salary:"20,000",
+                gender:"male"
+            },
+            {
+                id:2,
+                name:'Ak',
+                age:32,
+                work:"Mobile developer",
+                salary:"80,000",
+                gender:"male"
+            },
+            {
+                id:3,
+                name:'Krish',
+                age:25,
+                work:"Full Stack developer",
+                salary:"50,000",
+                gender:"male"
+            },
+            {
+                id:4,
+                name:'Mari',
+                age:32,
+                work:"Backend developer",
+                salary:"30,000",
+                gender:"male"
+            },
+            {
+                id:5,
+                name:'Selvi',
+                age:32,
+                work:"Backend developer",
+                salary:"30,000",
+                gender:"Female"
+            },
+        ]
+
+        // Create table rows
+        const tableRows = user.map(user => `
+            <tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.age}</td>
+                <td>${user.work}</td>
+                <td>${user.salary}</td>
+                <td>${user.gender}</td>
+            </tr>
+        `).join('');
+
+        // Insert rows into table body
+        document.querySelector('#userTable tbody').innerHTML = tableRows;
+
+    </script>
+</body>
+</html>

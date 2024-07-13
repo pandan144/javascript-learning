@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach Method List</title>
+</head>
+<body>
+
+<h1>Array Foreach Method</h1>
+
+<ul class="lists">
+    <li>DEMO LIST</li>
+</ul>
+
+<script>
+    let arr = ["Arul","Krish","Pand","Mari","hari","Reuben","Muth","Pravin"];
+
+    arr.forEach(valu =>{
+        let li= document.createElement('li');
+        li.className="list";
+        li.innerText=valu.toUpperCase();
+        document.querySelector('.lists').appendChild(li)
+        
+    })
+</script>
+
+    
+</body>
+</html>
