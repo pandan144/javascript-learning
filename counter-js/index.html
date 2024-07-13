@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result">0</h1>
+    <button class="button1" onclick="degrement()">Decers</button>
+    <button class="button2" onclick="reset()">reset</button>
+    <button class="button3" onclick="increment()">incres</button>
+
+
+    <script>
+        var res=document.getElementById('result');
+        var count= 0;
+        function increment(){
+             count++;
+             res.innerHTML= count;
+        }
+        console.log(count)
+        
+        function degrement(){
+            count--;
+            res.innerHTML= count;
+        }
+
+        function reset(){
+            count= 0;
+            res.innerHTML= count;
+        }
+        
+    </script>
+</body>
+</html>
