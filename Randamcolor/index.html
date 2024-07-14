@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randamcolor</title>
+
+    <style>
+        body,div{
+            display: flex;align-items: center;justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        div{
+            border:5px double #cfcfcf;
+            padding:1rem;
+            color: white;
+            background-color:rgba(0,0,0,0.5);
+            width:100%;
+            max-width: 300px;
+            height: 200px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Randamcolor Generate</h1>
+        <h2 id="out"></h2>
+        <button onclick="colorChange()">color</button>
+    </div>
+   
+
+    <script>
+        let out = document.getElementById('out');
+        function colorChange(){
+            var color1=Math.floor(Math.random() * 266);
+            var color2=Math.floor(Math.random() * 266);
+            var color3=Math.floor(Math.random() * 266);
+            var output =`rgb(${color1},${color2},${color3})`;
+            out.innerText= output
+            document.body.style.backgroundColor=output;
+        }
+
+    </script>
+    
+</body>
+</html>
